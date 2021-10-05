@@ -1,0 +1,15 @@
+# https://github.com/actions/javascript-action
+
+name: 'LCOV Minimum test coverage checker'
+description: 'a github action that use lcov.info file verify if the test coverage has reached a minimum threshold'
+author: 'Terence Tai'
+inputs:
+  coverage-file:
+    description: 'File path of the test coverage file. e.g.: `coverage/lcov.info`'
+    required: true
+  minimum-coverage:
+    description: 'The minimum test coverage threshold. Optional. Default: `0` (always passes)'
+    default: 0
+runs:
+  using: 'node12'
+  main: 'dist/main/index.js'
