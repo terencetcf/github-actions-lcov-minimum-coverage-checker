@@ -10,9 +10,13 @@ async function run() {
     const tmpPath = path.resolve(os.tmpdir(), github.context.action);
     const coverageFilesPattern = core.getInput('coverage-file');
     const coverageFilePath = tmpPath + coverageFilesPattern;
+
+    core.info(`Reading coverage file (${coverageFilePath}) content...`);
     const coverageFileContent = fs.readFileSync(coverageFilePath, {
       encoding: 'utf-8',
     });
+
+    core.info(`Parsing lcov results...`);
     const lcovRecords = parseLCOV(coverageFileContent);
     const totalLinesHit = lcovRecords.reduce<number>(
       (acc, rec) => acc + rec.lines.hit,
@@ -35,7 +39,7 @@ async function run() {
 
     core.info(`The current code coverage ${totalCoverage}%`);
   } catch (error: any) {
-    core.setFailed(error.message);
+    core.setFailed(error);
   }
 }
 
