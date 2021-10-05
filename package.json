@@ -2,11 +2,11 @@
   "name": "github-actions-lcov-minimum-coverage-checker",
   "version": "1.0.0",
   "description": "a github action that use lcov.info file verify if the test coverage has reached a minimum threshold",
-  "main": "index.js",
   "repository": "https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker",
   "author": "Terence Tai",
   "license": "MIT",
   "scripts": {
+    "build": "tsc && ncc build dist/index.js --license licenses.txt",
     "start": "ts-node-dev src/index.ts"
   },
   "dependencies": {
