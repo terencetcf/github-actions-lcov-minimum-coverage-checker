@@ -7,6 +7,7 @@ import parseLCOV from 'parse-lcov';
 
 async function run() {
   try {
+    core.info(`Start...`);
     const tmpPath = path.resolve(os.tmpdir(), github.context.action);
     const coverageFilesPattern = core.getInput('coverage-file');
     const coverageFilePath = tmpPath + coverageFilesPattern;
@@ -39,7 +40,7 @@ async function run() {
 
     // core.info(`The current code coverage ${totalCoverage}%`);
   } catch (error: any) {
-    core.setFailed(error);
+    // core.setFailed(error);
   }
 }
 

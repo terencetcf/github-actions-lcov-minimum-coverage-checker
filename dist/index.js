@@ -24,13 +24,13 @@ const core_1 = __importDefault(__nccwpck_require__(5127));
 const github_1 = __importDefault(__nccwpck_require__(3134));
 async function run() {
     try {
+        core_1.default.info(`Start...`);
         const tmpPath = path_1.default.resolve(os_1.default.tmpdir(), github_1.default.context.action);
         const coverageFilesPattern = core_1.default.getInput('coverage-file');
         const coverageFilePath = tmpPath + coverageFilesPattern;
         core_1.default.info(`Reading coverage file (${coverageFilePath}) content...`);
     }
     catch (error) {
-        core_1.default.setFailed(error);
     }
 }
 run();
