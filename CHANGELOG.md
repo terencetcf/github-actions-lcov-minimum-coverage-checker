@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.1...v1.3.2) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** change on release type to released in gh action ([e47a485](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/e47a4852b0a21f6f354e66670d293f17ab237b98))
+
 ## [1.3.1](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.0...v1.3.1) (2021-10-06)
 
 
