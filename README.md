@@ -6,10 +6,10 @@ github action that use lcov.info file verify if the test coverage has reached a 
 
 ### Inputs
 
-For more information on these inputs, see the [Workflow syntax for GitHub Actions](https://docs.github.com/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepswith)
+For more information on these inputs, see the [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions)
 
-- `coverage-files`: The coverage files to scan. For example, `coverage/lcov.*.info`
-- `minimum-coverage`: The minimum coverage to pass the check. Optional. Default: `0` (always passes)
+- `coverage-file`: File path of the test coverage file. e.g.: `coverage/lcov.info`
+- `minimum-coverage`: The minimum test coverage threshold. Optional. Default: `0`
 
 ### Common workflow
 

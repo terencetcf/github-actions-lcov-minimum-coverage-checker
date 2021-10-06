@@ -3,12 +3,15 @@
 name: 'LCOV Minimum test coverage checker'
 description: 'a github action that use lcov.info file verify if the test coverage has reached a minimum threshold'
 author: 'Terence Tai'
+branding:
+  icon: 'check-circle'
+  color: 'green'
 inputs:
   coverage-file:
     description: 'File path of the test coverage file. e.g.: `coverage/lcov.info`'
     required: true
   minimum-coverage:
-    description: 'The minimum test coverage threshold. Optional. Default: `0` (always passes)'
+    description: 'The minimum test coverage threshold. Optional. Default: `0`'
     default: 0
 runs:
   using: 'node12'
