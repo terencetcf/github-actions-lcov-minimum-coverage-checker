@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.2.2...v1.3.0) (2021-10-06)
+
+
+### Features
+
+* **cicd:** add versioning gh action ([ca5b8c9](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/ca5b8c91f0fff9185f42beeb42901cefccc210c9))
+
 ## [1.2.2](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.2.1...v1.2.2) (2021-10-06)
 
 
