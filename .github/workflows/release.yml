@@ -1,24 +1,33 @@
-name: Create Release
+name: Semantic Release
 on:
   push:
-    tags:
-      # Push events to matching v*, i.e. v1.0, v20.15.10
-      - 'v*'
+    branches:
+      - main
 
 jobs:
-  build:
-    name: Create Release
+  release:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@master
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        uses: ./
+        with:
+          coverage-file: dist/example-lcov.info
+          minimum-coverage: 80
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+        run: npx semantic-release
