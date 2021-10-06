@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.5...v1.3.6) (2021-10-06)
+
+
+### Bug Fixes
+
+* **code:** extract some logics out from index.ts ([419b7b8](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/419b7b8f9f249e5d3be9838ef875ae013aae8f51))
+
 ## [1.3.5](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.4...v1.3.5) (2021-10-06)
 
 
