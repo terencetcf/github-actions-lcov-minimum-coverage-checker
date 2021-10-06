@@ -1,6 +1,6 @@
 # GitHub Action — LCOV Minimum Coverage Checker
 
-github action that use lcov.info file verify if the test coverage has reached a minimum threshold
+A github action that use lcov.info file verify if the test coverage has reached a minimum threshold
 
 ## Usage
 
