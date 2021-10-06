@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.2...v1.3.3) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** allow versioning gh action to be triggered manually ([0b79154](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/0b79154fa09c68491a861cb0a429c0d63f898979))
+
 ## [1.3.2](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.1...v1.3.2) (2021-10-06)
 
 
