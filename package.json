@@ -5,13 +5,14 @@
   "repository": "https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker",
   "author": "Terence Tai",
   "license": "MIT",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "tsc && ncc build dist/index.js --license licenses.txt",
+    "build": "tsc",
+    "package": "yarn build && ncc build --source-map --license licenses.txt",
     "start": "ts-node-dev src/index.ts"
   },
   "dependencies": {
-    "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.0",
+    "@actions/core": "^1.4.0",
     "lcov-total": "^1.0.7",
     "parse-lcov": "^1.0.4"
   },
