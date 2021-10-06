@@ -1,8 +1,5 @@
 node_modules/
 
-# Editors
-.vscode/
-
 # Logs
 logs
 *.log

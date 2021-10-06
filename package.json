@@ -1,24 +1,42 @@
 {
-  "name": "github-actions-lcov-minimum-coverage-checker",
-  "version": "1.0.0",
-  "description": "a github action that use lcov.info file verify if the test coverage has reached a minimum threshold",
-  "repository": "https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker",
-  "author": "Terence Tai",
-  "license": "MIT",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "tsc",
-    "package": "yarn build && ncc build --source-map --license licenses.txt",
-    "start": "ts-node-dev src/index.ts"
-  },
-  "dependencies": {
-    "@actions/core": "^1.4.0",
-    "lcov-total": "^1.0.7",
-    "parse-lcov": "^1.0.4"
-  },
-  "devDependencies": {
-    "@types/node": "^16.10.2",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.4.3"
-  }
+    "name": "github-actions-lcov-minimum-coverage-checker",
+    "version": "1.0.0",
+    "description": "a github action that use lcov.info file verify if the test coverage has reached a minimum threshold",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker"
+    },
+    "keywords": [
+        "actions",
+        "lcov",
+        "test",
+        "coverage"
+    ],
+    "author": "Terence Tai",
+    "license": "MIT",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "tsc",
+        "package": "yarn build && ncc build --source-map --license licenses.txt",
+        "start": "ts-node-dev src/index.ts"
+    },
+    "dependencies": {
+        "@actions/core": "^1.4.0",
+        "lcov-total": "^1.0.7",
+        "parse-lcov": "^1.0.4"
+    },
+    "devDependencies": {
+        "@types/node": "^16.10.2",
+        "@typescript-eslint/eslint-plugin": "^4.33.0",
+        "@typescript-eslint/parser": "^4.33.0",
+        "@vercel/ncc": "^0.31.1",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "prettier": "^2.4.1",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.4.3"
+    }
 }

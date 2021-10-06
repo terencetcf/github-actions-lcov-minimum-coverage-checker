@@ -29,6 +29,6 @@ jobs:
       - name: Check test coverage
         uses: terencetcf/github-actions-lcov-minimum-coverage-checker@v1
         with:
-          coverage-files: coverage/lcov.*.info
+          coverage-file: coverage/lcov.info
           minimum-coverage: 90
 ```
