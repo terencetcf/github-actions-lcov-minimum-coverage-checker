@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.0...v1.3.1) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** change to ubuntu in versioning gh actino ([037d862](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/037d86228faa7e03de72cf18f10522b87ed43bad))
+
 # [1.3.0](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.2.2...v1.3.0) (2021-10-06)
 
 
