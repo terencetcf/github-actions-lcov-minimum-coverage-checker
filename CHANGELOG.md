@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.3...v1.3.4) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** use custom gh token for semantic release in order to allow action trigger released event properly ([f3a9320](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/f3a93206153fb88d40036eaa1581da876dabff23))
+
 ## [1.3.3](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.2...v1.3.3) (2021-10-06)
 
 
