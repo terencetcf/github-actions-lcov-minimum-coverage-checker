@@ -18,7 +18,6 @@
   "scripts": {
     "build": "tsc",
     "package": "yarn build && ncc build --source-map --license licenses.txt",
-    "start": "ts-node-dev src/index.ts",
     "format": "prettier --write **/*.ts",
     "lint": "eslint src/**/*.ts",
     "all": "yarn format && yarn lint && yarn package"
@@ -42,7 +41,6 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.4.1",
     "semantic-release": "^18.0.0",
-    "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.3"
   }
 }
