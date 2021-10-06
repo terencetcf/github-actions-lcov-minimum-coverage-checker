@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.4...v1.3.5) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** remove unwanted ts-node-dev ([a455373](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/a455373f9553edd0c4b55a9bf183a32daf07f8c2))
+
 ## [1.3.4](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.3...v1.3.4) (2021-10-06)
 
 
