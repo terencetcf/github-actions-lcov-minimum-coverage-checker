@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.2.1...v1.2.2) (2021-10-06)
+
+
+### Bug Fixes
+
+* **cicd:** clean up github actions ([558c941](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/558c9414ad113ecd97ef7ac6bf65e86fe18f661f))
+
 ## [1.2.1](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.2.0...v1.2.1) (2021-10-06)
 
 
