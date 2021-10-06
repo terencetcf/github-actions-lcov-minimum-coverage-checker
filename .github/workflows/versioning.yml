@@ -1,9 +1,7 @@
 name: Keep the versions up-to-date
-
 on:
   release:
-    types: [released]
-  workflow_dispatch:
+    types: [published, edited]
 
 jobs:
   actions-tagger:
