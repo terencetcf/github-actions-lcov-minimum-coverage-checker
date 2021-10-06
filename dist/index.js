@@ -34,27 +34,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
-const fs_1 = __importDefault(__nccwpck_require__(747));
-const parse_lcov_1 = __importDefault(__nccwpck_require__(508));
+const _utils_1 = __nccwpck_require__(252);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const coverageFilesPattern = core.getInput('coverage-file');
-            const coverageFilePath = `./${coverageFilesPattern}`;
-            core.info(`Reading coverage file (${coverageFilePath}) content...`);
-            const coverageFileContent = fs_1.default.readFileSync(coverageFilePath, {
-                encoding: 'utf-8',
-            });
-            core.info(`Parsing lcov results...`);
-            const lcovRecords = (0, parse_lcov_1.default)(coverageFileContent);
-            const totalLinesHit = lcovRecords.reduce((acc, rec) => acc + rec.lines.hit, 0);
-            const totalLinesFound = lcovRecords.reduce((acc, rec) => acc + rec.lines.found, 0);
-            const totalCoverage = Math.round((totalLinesHit / totalLinesFound) * 100);
+            const filePath = core.getInput('coverage-file');
+            const fullFilePath = `./${filePath}`;
+            core.info(`Loading test coverage file (${fullFilePath})...`);
+            const content = _utils_1.fileUtil.getFileContent(fullFilePath);
+            core.info(`Verify test coverage results...`);
+            const totalCoverage = _utils_1.testCoverageUtil.getCoveragePercentage(content);
             const minimumCoverage = parseInt(core.getInput('minimum-coverage'));
             const isFailure = totalCoverage < minimumCoverage;
             if (isFailure) {
@@ -1822,6 +1813,73 @@ if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) {
   debug = function() {};
 }
 exports.debug = debug; // for test
+
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.fileUtil = void 0;
+const fs_1 = __importDefault(__nccwpck_require__(747));
+exports.fileUtil = {
+    getFileContent: (filePath) => {
+        return fs_1.default.readFileSync(filePath, {
+            encoding: 'utf-8',
+        });
+    },
+};
+
+
+/***/ }),
+
+/***/ 252:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(90), exports);
+__exportStar(__nccwpck_require__(479), exports);
+
+
+/***/ }),
+
+/***/ 479:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.testCoverageUtil = void 0;
+const parse_lcov_1 = __importDefault(__nccwpck_require__(508));
+exports.testCoverageUtil = {
+    getCoveragePercentage: (lcovContent) => {
+        const records = (0, parse_lcov_1.default)(lcovContent);
+        const totalLinesHit = records.reduce((acc, rec) => acc + rec.lines.hit, 0);
+        const totalLinesFound = records.reduce((acc, rec) => acc + rec.lines.found, 0);
+        return Math.round((totalLinesHit / totalLinesFound) * 100);
+    },
+};
 
 
 /***/ }),
