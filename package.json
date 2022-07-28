@@ -23,24 +23,24 @@
     "all": "yarn format && yarn lint && yarn package"
   },
   "dependencies": {
-    "@actions/core": "^1.4.0",
-    "lcov-total": "^1.0.7",
+    "@actions/core": "^1.9.0",
+    "lcov-total": "^2.1.0",
     "parse-lcov": "^1.0.4"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/git": "^10.0.0",
-    "@types/node": "^16.10.2",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "@vercel/ncc": "^0.31.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-prettier": "^4.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^18.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "^2.4.1",
-    "semantic-release": "^18.0.0",
-    "typescript": "^4.4.3"
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.3",
+    "typescript": "^4.7.4"
   }
 }
