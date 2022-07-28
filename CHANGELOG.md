@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.6...v1.4.0) (2022-07-28)
+
+
+### Features
+
+* update npm packages and remove files ([fc6c3c0](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/fc6c3c031851e31063c8367fc7695079e1511dca))
+
 ## [1.3.6](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.5...v1.3.6) (2021-10-06)
 
 

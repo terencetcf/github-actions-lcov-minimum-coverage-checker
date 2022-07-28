@@ -1,6 +1,6 @@
 {
   "name": "github-actions-lcov-minimum-coverage-checker",
-  "version": "1.3.6",
+  "version": "1.4.0",
   "description": "a github action that use lcov.info file verify if the test coverage has reached a minimum threshold",
   "repository": {
     "type": "git",
