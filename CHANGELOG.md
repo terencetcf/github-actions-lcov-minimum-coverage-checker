@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.4.0...v1.4.1) (2022-07-28)
+
+
+### Bug Fixes
+
+* update yarn.lock file ([#8](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/issues/8)) ([9853cb7](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/commit/9853cb7ca2c02ac8732b4be0068e6f8bd8b3968b))
+
 # [1.4.0](https://github.com/terencetcf/github-actions-lcov-minimum-coverage-checker/compare/v1.3.6...v1.4.0) (2022-07-28)
 
 
