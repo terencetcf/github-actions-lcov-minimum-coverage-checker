@@ -23,7 +23,7 @@
     "all": "yarn format && yarn lint && yarn package"
   },
   "dependencies": {
-    "@actions/core": "^1.9.0",
+    "@actions/core": "^1.9.1",
     "lcov-total": "^2.1.0",
     "parse-lcov": "^1.0.4"
   },
